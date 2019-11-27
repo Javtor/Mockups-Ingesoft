@@ -236,7 +236,7 @@
                     </div>
                 </div>
                 <div id="reporModal" class="modal" tabindex="-1" role="dialog">
-                    <div class="modal-dialog" role="document">
+                    <div class="modal-dialog modal-xl" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title">Movimientos de inventario</h5>
@@ -245,23 +245,127 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <div class="form-group">
-                                    <h5 for="exampleFormControlSelect1">Asunto</h5>
-                                    <input type="text" class="form-control " id="exampleFormControlInput1">
-                                </div>
-                                <div class="form-group">
-                                    <h5 for="exampleFormControlSelect1">Contenido</h5>
-                                    <textarea type="text" class="form-control "
-                                        id="exampleFormControlInput1"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <h5 for="exampleFormControlSelect1">Adjunto</h5>
-                                    <input type="file" id="fileInput" name="fileInput" />
-                                </div>
+                                <table class="table">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Fecha</th>
+                                            <th scope="col">Tipo de movimiento</th>
+                                            <th scope="col">Administrador</th>
+                                            <th scope="col">Colaborador</th>
+                                            <th scope="col">Motivo</th>
+                                            <th scope="col">Item</th>
+                                            <th scope="col">Proveedor</th>
+                                            <th scope="col">Area</th>
+                                            <th scope="col">Talla</th>
+                                            <th scope="col">Cantidad</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>23/11/19 15:10:00</td>
+                                            <td>Retiro</td>
+                                            <td>Adolfo López - CC. 987654321</td>
+                                            <td>José Pérez - CC. 123456789</td>
+                                            <td>Daño</td>
+                                            <td>Camisa</td>
+                                            <td>Telas A</td>
+                                            <td>Administración</td>
+                                            <td>M</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>23/11/19 15:10:00</td>
+                                            <td>Retiro</td>
+                                            <td>Adolfo López - CC. 987654321</td>
+                                            <td>José Pérez - CC. 123456789</td>
+                                            <td>Daño</td>
+                                            <td>Pantalón</td>
+                                            <td>Telas A</td>
+                                            <td>Administración</td>
+                                            <td>34</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>20/11/19 11:15:00</td>
+                                            <td>Ingreso</td>
+                                            <td>Adolfo López - CC. 987654321</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>Camisa</td>
+                                            <td>Telas A</td>
+                                            <td>Administración</td>
+                                            <td>M</td>
+                                            <td>4</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                                <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="danModal" class="modal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog modal-xl" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Histórico de daños</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col">Fecha</th>
+                                            <th scope="col">Administrador</th>
+                                            <th scope="col">Colaborador</th>
+                                            <th scope="col">Item</th>
+                                            <th scope="col">Proveedor</th>
+                                            <th scope="col">Area</th>
+                                            <th scope="col">Talla</th>
+                                            <th scope="col">Cantidad</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>23/11/19 15:10:00</td>
+                                            <td>Adolfo López - CC. 987654321</td>
+                                            <td>José Pérez - CC. 123456789</td>
+                                            <td>Camisa</td>
+                                            <td>Telas A</td>
+                                            <td>Administración</td>
+                                            <td>M</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>23/11/19 15:10:00</td>
+                                            <td>Adolfo López - CC. 987654321</td>
+                                            <td>José Pérez - CC. 123456789</td>
+                                            <td>Pantalón</td>
+                                            <td>Telas A</td>
+                                            <td>Administración</td>
+                                            <td>34</td>
+                                            <td>1</td>
+                                        </tr>
+                                       
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                                <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button> -->
                             </div>
                         </div>
                     </div>
@@ -333,11 +437,18 @@
                 <p></p>
                 <h4>Ver histórico de daños</h4>
                 <div class="form-group">
+                    <h5 for="exampleFormControlSelect1">Area</h5>
+                    <select class="form-control" id="area">
+                        <option selected>Administración</option>
+                        <option>Mantenimiento</option>
+                    </select>
+                </div>
+                <div class="form-group">
                     <h5 for="exampleFormControlSelect1">Cédula colaborador</h5>
                     <input type="text" class="form-control " id="exampleFormControlInput1">
                 </div>
-                <button type="submit" class="btn btn-primary" id="addAr" data-toggle="modal"
-                        data-target="#retModal">Ver histórico</button>
+                <button type="submit" class="btn btn-primary" id="addAr" data-toggle="modal" data-target="#danModal">Ver
+                    histórico</button>
             </main>
         </div>
     </div>
