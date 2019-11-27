@@ -106,21 +106,76 @@
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Agregar proveedor</h1>
                 </div>
-                <form class="col-4">
+                <div class="col-4">
                     <div class='adm'>
+                        <div class="form-group">
+                            <h5 for="exampleFormControlSelect1">NIT</h5>
+                            <input type="text" class="form-control " id="exampleFormControlInput1">
+                        </div>
+                        <div class="form-group">
+                            <h5 for="exampleFormControlSelect1">Dirección</h5>
+                            <input type="text" class="form-control " id="exampleFormControlInput1">
+                        </div>
                         <div class="form-group">
                             <h5 for="exampleFormControlSelect1">Nombre</h5>
                             <input type="text" class="form-control " id="exampleFormControlInput1">
                         </div>
+
+
+                        <p></p>
+
+                    </div>
+                    <div class="form-group">
+                        <h5 for="exampleFormControlSelect1">Nombre contacto</h5>
+                        <input type="text" class="form-control " id="exampleFormControlInput1">
+                    </div>
+                    <div class="form-group">
+                        <h5 for="exampleFormControlSelect1">Correo electrónico contacto</h5>
+                        <input type="text" class="form-control " id="exampleFormControlInput1">
+                    </div>
+                    <div class="form-group">
+                        <h5 for="exampleFormControlSelect1">Cargo contacto</h5>
+                        <input type="text" class="form-control " id="exampleFormControlInput1">
+                    </div>
+                    <div class="form-group">
+                        <h5 for="exampleFormControlSelect1">Teléfono contacto</h5>
+                        <input type="text" class="form-control " id="exampleFormControlInput1">
+                    </div>
+                    <div class="form-group tel">
+                        <h5 for="exampleFormControlSelect1">Teléfono contacto</h5>
+                        <input type="text" class="form-control " id="exampleFormControlInput1">
+                    </div>
+                    <button class="btn btn-primary agTel">Agregar telefono</button>
+
+                    <p></p>
+                    <div class='con'>
                         <div class="form-group">
-                            <h5 for="exampleFormControlSelect1">Correo electrónico</h5>
+                            <h5 for="exampleFormControlSelect1">Nombre contacto</h5>
                             <input type="text" class="form-control " id="exampleFormControlInput1">
                         </div>
+
+                        <div class="form-group">
+                            <h5 for="exampleFormControlSelect1">Correo electrónico contacto</h5>
+                            <input type="text" class="form-control " id="exampleFormControlInput1">
+                        </div>
+                        <div class="form-group">
+                            <h5 for="exampleFormControlSelect1">Cargo contacto</h5>
+                            <input type="text" class="form-control " id="exampleFormControlInput1">
+                        </div>
+                        <div class="form-group">
+                            <h5 for="exampleFormControlSelect1">Teléfono contacto</h5>
+                            <input type="text" class="form-control " id="exampleFormControlInput1">
+                        </div>
+                        <button class="btn btn-primary agTel">Agregar telefono</button>
+
                         <p></p>
 
                     </div>
 
-                </form>
+
+                </div>
+                <button class="btn btn-primary agCon">Agregar contacto</button>
+                <p></p>
                 <button onclick="alert('Provedor agregado correctamente');window.location.href = 'proveedores.html';"
                     type="submit" class="btn btn-primary">Enviar</button>
 
@@ -143,6 +198,8 @@
     </script>
     <script>
         $(document).ready(function () {
+            $('.con').hide();
+            $('.tel').hide();
             $('#enviarcorreo').click(function () {
                 alert("Notificaciones enviadas correctamente")
             })
@@ -161,6 +218,12 @@
 
                 }
             })
+            $('.agCon').on('click', function () {
+                $('.con').show();
+            });
+            $('.agTel').on('click', function () {
+                $('.tel').show();
+            });
             $('#todos').click(function () {
                 if ($('.persona').hasClass('active')) {
                     $('.persona').removeClass('active');
