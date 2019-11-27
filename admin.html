@@ -137,7 +137,8 @@
                                 </div>
                                 <div class="form-group">
                                     <h5 for="exampleFormControlSelect1">Contenido</h5>
-                                    <textarea type="text" class="form-control " id="exampleFormControlInput1"></textarea>
+                                    <textarea type="text" class="form-control "
+                                        id="exampleFormControlInput1"></textarea>
                                 </div>
                                 <div class="form-group">
                                     <h5 for="exampleFormControlSelect1">Adjunto</h5>
@@ -146,6 +147,51 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-primary" data-dismiss="modal">Enviar</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="estadoAjus" class="modal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Seleccione la prenda en ajuste a la que se le cambiará el estado
+                                </h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Camisa</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Pantalón</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="nuevoAjus" class="modal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Seleccione la prenda a ajustar
+                                </h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <h5 for="exampleFormControlSelect1">Motivo</h5>
+                                    <input type="text" class="form-control " id="exampleFormControlInput1">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Camisa</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Pantalón</button>
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
                             </div>
                         </div>
@@ -190,7 +236,7 @@
                         <button id="enviarcorreo" class="btn btn-primary">Enviar notificaciones a seleccionados</button>
                     </li>
                     <div class="list-group personas">
-                        <a href="#" class="list-group-item persona">María Escobar - CC. 123123123</a>
+                        <a href="#" class="list-group-item persona">María Escobar - CC. 123123123 </a>
                         <a href="#" class="list-group-item persona">Juan Rodríguez - CC. 987987987 </a>
                         <a href="#" class="list-group-item persona">Laura Rojas - CC. 456456456 </a>
 
@@ -198,7 +244,14 @@
 
                     <li class="list-group-item">Ya actualizaron<span class="badge">1</span></li>
                     <div class="list-group">
-                        <a href="#" class="list-group-item disabled">José Pérez - CC. 123456789 </a>
+                        <div class="row">
+
+                            <a href="#" class="list-group-item disabled ">José Pérez - CC. 123456789 </a> <button
+                                id="enviarcorreo" class="btn btn-primary ">Notificar dotación lista</button> <button
+                                id="" class="btn btn-primary" data-toggle="modal" data-target="#estadoAjus">Cambiar
+                                estado ajuste</button> <button id="" class="btn btn-primary" data-toggle="modal"
+                                data-target="#nuevoAjus">Nuevo ajuste</button>
+                        </div>
                     </div>
                 </ul>
                 <p></p>
