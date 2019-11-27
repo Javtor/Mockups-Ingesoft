@@ -108,7 +108,8 @@
                             <option selected>Telas A - telasa@telas.com</option>
                             <option>Telas B - telasb@telas.com</option>
                         </select></h1>
-                    <button type="submit" onclick="window.location.href = 'agProv.html';"class="btn btn-primary" id="addAr">Agregar proveedor</button>
+                    <button type="submit" onclick="window.location.href = 'agProv.html';" class="btn btn-primary"
+                        id="addAr">Agregar proveedor</button>
                 </div>
                 <form class="col-4">
                     <a type="submit" href="agItemProv.html" class="btn btn-primary">Agregar item a proveedor</a> <button
@@ -139,7 +140,46 @@
                     </div>
 
                 </form>
-
+                <h3>Cotizaciones</h3>
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Fecha</th>
+                            <th scope="col">Adjunto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>$150.000</td>
+                            <td>20/01/19</td>
+                            <td><a href="">cot1.xls</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>155.000</td>
+                            <td>20/08/19</td>
+                            <td><a href="">cot2.xls</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h4>Agregar cotización</h4>
+                <div class="form-group">
+                    <h5 for="exampleFormControlSelect1">Valor</h5>
+                    <input type="text" class="form-control " id="exampleFormControlInput1">
+                </div>
+                <div class="form-group">
+                    <h5 for="exampleFormControlSelect1">Fecha</h5>
+                    <input type="text" class="form-control " id="exampleFormControlInput1">
+                </div>
+                <div class="form-group">
+                    <h5 for="exampleFormControlSelect1">Adjunto</h5>
+                    <input type="file" id="fileInput" name="fileInput" />
+                </div>
+                <button onclick="alert('Cotización agregada correctamente')"
+                type="submit" class="btn btn-primary">Enviar</button>
             </main>
         </div>
     </div>
