@@ -104,22 +104,187 @@
                 </div>
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Administración de inventario: </h1>
+                    <h1 class="h2">Administración de inventario: </h1> <button type="submit" class="btn btn-primary"
+                        id="addAr" data-toggle="modal" data-target="#agModal">Agregar
+                        items</button> <button type="submit" class="btn btn-primary" id="addAr" data-toggle="modal"
+                        data-target="#retModal">Retirar items</button>
                 </div>
-
-                <ul class="list-group">
-                    <div class="list-group personas">
-                        <a href="#" class="list-group-item persona">Camiseta Operario (Id:1023211) <input type="number"
-                                class="form-control " id="exampleFormControlInput1" value="32"></a>
-                        <a href="#" class="list-group-item persona">Zapatos operario (Id:1200912) <input type="number"
-                                class="form-control " id="exampleFormControlInput1" value="32"></a>
-                        <a href="#" class="list-group-item persona">Pantalon operario (Id:990123) <input type="number"
-                                class="form-control " id="exampleFormControlInput1" value="32"></a>
-
+                <!-- Modal -->
+                <div id="agModal" class="modal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Agregar item</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <h5 for="exampleFormControlSelect1">Proveedor</h5>
+                                    <select class="form-control" id="area">
+                                        <option selected>Telas A</option>
+                                        <option>Telas B</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <h5 for="exampleFormControlSelect1">Area</h5>
+                                    <select class="form-control" id="area">
+                                        <option selected>Administración</option>
+                                        <option>Mantenimiento</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <h5 for="exampleFormControlSelect1">Ítem</h5>
+                                    <select class="form-control" id="area">
+                                            <option selected>Camisa</option>
+                                            <option>Pantalón</option>
+                                        </select>
+                                </div>
+                                <div class="form-group">
+                                    <h5 for="exampleFormControlSelect1">Talla</h5>
+                                    <select class="form-control" id="area">
+                                            <option selected>M</option>
+                                            <option>L</option>
+                                        </select>
+                                </div>
+                                <div class="form-group">
+                                    <h5 for="exampleFormControlSelect1">Cantidad</h5>
+                                    <input type="text" class="form-control " id="exampleFormControlInput1">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            </div>
+                        </div>
                     </div>
-                </ul>
+                </div>
+                <div id="retModal" class="modal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Retirar ítems</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <h5 for="exampleFormControlSelect1">Asunto</h5>
+                                    <input type="text" class="form-control " id="exampleFormControlInput1">
+                                </div>
+                                <div class="form-group">
+                                    <h5 for="exampleFormControlSelect1">Contenido</h5>
+                                    <textarea type="text" class="form-control "
+                                        id="exampleFormControlInput1"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <h5 for="exampleFormControlSelect1">Adjunto</h5>
+                                    <input type="file" id="fileInput" name="fileInput" />
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="reporModal" class="modal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Movimientos de inventario</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <h5 for="exampleFormControlSelect1">Asunto</h5>
+                                    <input type="text" class="form-control " id="exampleFormControlInput1">
+                                </div>
+                                <div class="form-group">
+                                    <h5 for="exampleFormControlSelect1">Contenido</h5>
+                                    <textarea type="text" class="form-control "
+                                        id="exampleFormControlInput1"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <h5 for="exampleFormControlSelect1">Adjunto</h5>
+                                    <input type="file" id="fileInput" name="fileInput" />
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin Modal -->
+                <div class="row">
+                    <div class="col">
+                        <h4>Área</h4>
+                        <select class="form-control" id="area">
+                            <option selected>Cualquiera</option>
+                            <option>Administración</option>
+                            <option>Mantenimiento</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <h4>Proveedor</h4>
+                        <select class="form-control" id="area">
+                            <option selected>Cualquiera</option>
+                            <option>Telas A</option>
+                            <option>Telas B</option>
+                        </select>
+                    </div>
+                </div>
                 <p></p>
-                <button id="enviarcorreo" class="btn btn-primary">Generar reporte inventario</button>
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Item</th>
+                            <th scope="col">Proveedor</th>
+                            <th scope="col">Area</th>
+                            <th scope="col">Talla</th>
+                            <th scope="col">Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Camisa</td>
+                            <td>Telas A</td>
+                            <td>Administración</td>
+                            <td>M</td>
+                            <td>20</td>
+                        </tr>
+                        <tr class="table-danger">
+                            <th scope="row">2</th>
+                            <td>Camisa</td>
+                            <td>Telas A</td>
+                            <td>Administración</td>
+                            <td>L</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Pantalón</td>
+                            <td>Telas A</td>
+                            <td>Administración</td>
+                            <td>34</td>
+                            <td>20</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p></p>
+                <button type="submit" class="btn btn-primary" id="addAr" data-toggle="modal"
+                    data-target="#reporModal">Ver movimientos de inventario</button>
+
             </main>
         </div>
     </div>
